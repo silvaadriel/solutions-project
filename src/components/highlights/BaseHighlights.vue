@@ -16,9 +16,7 @@
 	      <p>{{ highlightItem.description }}</p>
 	    </li>
   	</ul>
-  <div class="call">
-      <a href="#" class="btn">Ver mais</a>
-  </div>
+  	<show-more-buttom/>
   </section>
 </template>
 
@@ -76,10 +74,7 @@
 		background: #636363;
 		margin: 10px auto;
 	}
-	.call {
-		text-align: center;
-		padding: 2em 0 3em 0em;
-	}
+
 	#destaque {
 		padding-top: 8em;
 	}
@@ -116,22 +111,18 @@
 </style>
 
 <script>
+import ShowMoreButtom from '@/components/ShowMoreButtom';
+
 export default {
   name: 'BaseHighlights',
-  components: {},
+  components: {
+  	ShowMoreButtom,
+  },
   props: {
   	highlightsArray: {
   		type: Array,
   		default: null,
   	},
   },
-  data() {
-    return {};
-  },
-  computed: {},
-  created() {
-  	console.log(this.highlightsArray, 'hig')
-  },
-  methods: {},
 };
 </script>
